@@ -1,0 +1,21 @@
+@import "../../../style/variables.scss";
+
+.button {
+  padding: 24px 100px;
+  color: #fff;
+  background: $accent-bg;
+  border-radius: 60px;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.button:hover {
+  transition: all 0.3s;
+  opacity: 0.5;
+}
+
+.small-btn {
+  margin-left: 27%;
+  padding: 20px 40px;
+}

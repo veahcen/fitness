@@ -1,0 +1,91 @@
+@import "../../style/variables.scss";
+
+.card {
+  position: relative;
+  cursor: pointer;
+  padding: 38px 25px 25px 31px;
+  max-width: 187px;
+  border-radius: 20px;
+  border: 1px solid $border;
+  background: #fff;
+  &__header {
+    padding-bottom: 6px;
+    font-family: 'bebasneuecyrillic';
+    font-size: 30px;
+    color: $text2;
+  }
+  &__price {
+    padding-bottom: 29px;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &__oldPrice {
+    display: flex;
+    position: absolute;
+    right: 32px;
+    bottom: 84px;
+    color: $old;
+    font-size: 24px;
+    text-decoration: line-through;
+  }
+}
+
+.card-big {
+  max-width: 585px;
+  max-height: 125px;
+  display: flex;
+  align-items: center;
+  padding: 23px 52px 25px 31px;
+}
+
+.header-big {
+  font-size: 38px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  color: $card-color;
+}
+
+.price-big {
+  padding-right: 30px;
+}
+
+.oldPrice-big {
+  left: 40%;
+  bottom: 22px;
+}
+
+.description-big {
+  line-height: 130%;
+}
+
+.card-selected {
+  transition: all 0.3s;
+  border: 1px solid $accent;
+  background: rgba($accent, 0.05);
+}
+
+.card-discount::before {
+  content: url('../../resources/star.svg');
+  width: 66px;
+  height: 65px;
+  position: absolute;
+  display: inline-block;
+  right: 3px;
+  top: -25px;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.discount {
+  position: absolute;
+  display: inline-block;
+  right: 14px;
+  top: -4px;
+  color: #fff;
+  font-size: 18px;
+}
+

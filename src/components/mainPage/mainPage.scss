@@ -1,0 +1,75 @@
+@import "../../style/variables.scss";
+
+.main {
+  padding: 26px 0 107px 0;
+  font-family: 'PT-Root-UI';
+  &__header {
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 110%;
+  }
+  &-box {
+    margin-top: 97px;
+  }
+  &__img {
+    margin-right: 80px;
+    max-width: 434px;
+  }
+  &__info {
+    max-width: 585px;
+    &-text {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 130%;
+      margin-bottom: 21px;
+    }
+    &-contract {
+      position: relative;
+      display: block;
+      width: 418px;
+      padding-left: 35px;
+      font-size: 16px;
+    }
+    &-description {
+      margin-top: 30px;
+      color: $text2;
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label::before {
+  content: '';
+  position: absolute;
+  top: 19%;
+  left: 0;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid $text2;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:checked+label::before {
+  border-color: $accent;
+  background-color: $accent;
+  background-image: url("../../resources/check.svg");
+}
+
+.link {
+  color: $link;
+}

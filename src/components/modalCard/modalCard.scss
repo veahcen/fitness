@@ -1,0 +1,92 @@
+@import "../../style/variables.scss";
+
+.modal {
+  &__card {
+    width: 210px;
+    padding: 14px 36px 20px 26px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid $border;
+    &-header {
+      padding-bottom: 6px;
+      color: $card-color;
+      font-family: 'bebasneuecyrillic';
+      font-size: 26px;
+    }
+    &-oldPrice {
+      color: $text2;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    &-oldPrice::before,
+    &-oldPrice::after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 23%;
+      height: 2px;
+      background-color: $accent-bg;
+      transform-origin: center;
+    }
+    &-oldPrice::before {
+      transform: rotate(18deg);
+    }
+
+    &-oldPrice::after {
+      transform: rotate(-18deg);
+    }
+    &-price {
+      padding-top: 24px;
+      font-weight: 500;
+      color: $card-color;
+      font-size: 46px;
+      line-height: 110%;
+    }
+    &-price::before {
+      content: url('../../resources/star.svg');
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      display: inline-block;
+      right: -14px;
+      top: 6px;
+    }
+    &-focus {
+      position: absolute;
+      right: 20px;
+      top: 25px;
+      width: 22px;
+      height: 22px;
+      border: 1px solid #555965;
+      border-radius: 100%;
+    }
+    &-focusActive {
+      border: 1px solid $accent;
+    }
+    &-focusActive::after {
+      content: url('../../resources/ellipse.svg');
+      position: absolute;
+      top: -1px;
+      left: 4px;
+    }
+    &-selected {
+      transition: all 0.3s;
+      border: 1px solid $accent;
+      background: rgba($accent, 0.05);
+    }
+  }
+}
+
+.line {
+  padding-top: 16px;
+  border-bottom: 1px solid $line;
+}
+
+.discount-modal {
+  color: #fff;
+  z-index: 4;
+  right: 28px;
+  bottom: 53px;
+  font-size: 14px;
+}

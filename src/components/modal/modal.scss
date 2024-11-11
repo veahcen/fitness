@@ -1,0 +1,64 @@
+@import "../../style/variables.scss";
+
+.modal {
+  padding: 55px 40px 40px 40px;
+  width: 750px;
+  z-index: 2;
+  &-overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  &-absol {
+    padding: 4px 10px 6px;
+    background-color: $accent;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &-close {
+    top: 1px;
+    right: 18px;
+    font-size: 40px;
+    color: $close;
+  }
+  &-title {
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 130%;
+    padding-bottom: 30px;
+  }
+  &-subtitle {
+    font-size: 24px;
+  }
+  &-content {
+    display: inline-block;
+    margin-left: 103px;
+    padding: 12px 28px 16px 30px;
+    font-weight: 500;
+    font-size: 24px;
+    border: 2px solid $accent;
+    border-radius: 30px;
+  }
+  &__box {
+    &-subtitle {
+      padding-bottom: 20px;
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+}
+
+.accent {
+  color: $accent;
+}
+
+.strong {
+  font-family: 'Rubik';
+  font-weight: 500;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}

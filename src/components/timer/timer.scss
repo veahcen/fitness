@@ -1,0 +1,42 @@
+@import "../../style/variables.scss";
+
+.timer {
+  padding-right: 70px;
+  font-family: 'PT-Root-UI';
+  font-weight: 700;
+  &__title {
+    margin-top: 16px;
+    font-size: 30px;
+  } 
+  &__num {
+    line-height: 1;
+    color: $accent;
+    font-family: 'BebasNeue-Regular';
+    font-weight: 400;
+    font-size: 60px;
+  }
+  &__colon {
+    line-height: 1;
+    font-family: 'PT-Root-UI';
+    font-size: 50px;
+    opacity: 0.5;
+  }
+  &__text {
+    position: absolute;
+    bottom: -32%;
+  }
+}
+
+.timer-danger {
+  color: $accent-bg;
+  animation: timer-animation 2s infinite alternate-reverse ease-in 1s;
+}
+
+@keyframes timer-animation {
+  from {
+    opacity: 1;
+  } 
+  to {
+    opacity: 0.5;
+  }
+}
