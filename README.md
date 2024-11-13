@@ -14,7 +14,7 @@
 1. Создайте папку и перейдите в нее
 `cd <Имя-папки>`
 2. Склонируйте репозиторий
-`git clone https://github.com/veahcen/marvel.git`
+`git clone https://github.com/veahcen/fitness.git`
 3. Утановите все зависимости:
 `npm install`
 4. Теперь можете запускать проект:
